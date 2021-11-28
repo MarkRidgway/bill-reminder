@@ -1,24 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import { Bill, IBillProps  } from './components';
+
+const bills: IBillProps[] = [
+  {
+    amount: 45.65,
+    title: "Internet",
+    date: new Date(2021, 12, 6),
+  },
+  {
+    amount: 0,
+    title: "Cable",
+    date: new Date(2021, 12, 10),
+  },
+  {
+    amount: 302,
+    title: "Car",
+    date: new Date(2021, 12, 22),
+  },
+  {
+    amount: 1800,
+    title: "Mortgage",
+    date: new Date(2022, 1, 6),
+  },
+];
+
+new Date(1987, 1, 11)
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Bill.List>
+        { bills.map( (bill) => (
+          <Bill key={ `${bill.title}-${bill.date.toISOString()}` } { ...bill } />
+        ))}
+      </Bill.List>
     </div>
   );
 }
