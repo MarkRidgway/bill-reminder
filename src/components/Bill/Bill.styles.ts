@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.li`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`;
+
 export const Text = styled.h2`
   display: flex;
 `;

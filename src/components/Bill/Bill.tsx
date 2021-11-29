@@ -17,13 +17,13 @@ export interface IBillProps {
 }
 
 export const Bill: React.FC<IBillProps> & IBill = ({ amount, title, date }) => (
-  <li>
+  <Styled.Wrapper>
     <Styled.Text>
       <Styled.Title>{title}</Styled.Title>
       <Styled.Amount>{toUsd(amount)}</Styled.Amount>
       <Styled.Date>{format(date, 'do')}</Styled.Date>
     </Styled.Text>
-  </li>
+  </Styled.Wrapper>
 );
 
 Bill.List = BillList;
