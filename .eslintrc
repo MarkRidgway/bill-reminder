@@ -1,7 +1,17 @@
 {
   "extends": ["devjmetivier"],
   "rules": {
-    "react/jsx-no-useless-fragment": "error"
+    "react/jsx-no-useless-fragment": "error",
+    "import/order": [
+      "ERROR",
+      {
+        "groups": [
+          ["builtin", "external"],
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "always"
+      }
+    ]
   },
   "overrides": [
     {
