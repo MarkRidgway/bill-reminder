@@ -2,13 +2,20 @@
   "extends": ["devjmetivier"],
   "rules": {
     "react/jsx-no-useless-fragment": "error",
-    // "react/jsx-curly-spacing": [1, { "when": "always", "children": true }],
+    "import/order": [
+      "ERROR",
+      {
+        "groups": [
+          ["builtin", "external"],
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "always"
+      }
+    ]
   },
   "overrides": [
     {
-      "files": [
-        "**/*.stories.*"
-      ],
+      "files": ["**/*.stories.*"],
       "rules": {
         "import/no-anonymous-default-export": "off"
       }

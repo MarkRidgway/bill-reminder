@@ -1,4 +1,5 @@
 import React from 'react';
+import List from '@mui/material/List';
 
 import { Bill, IBillProps } from './components';
 
@@ -29,11 +30,11 @@ new Date(1987, 1, 11);
 function App() {
   return (
     <div className='App'>
-      <Bill.List>
+      <List sx={{ maxWidth: 600 }}>
         {bills.map((bill) => (
           <Bill key={`${bill.title}-${bill.date.toISOString()}`} {...bill} />
         ))}
-      </Bill.List>
+      </List>
     </div>
   );
 }
