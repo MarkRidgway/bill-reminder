@@ -1,8 +1,9 @@
 import React from 'react';
 import { format } from 'date-fns';
 
-import { BillList } from './BillList';
 import { toUsd } from '../../utils/currency';
+
+import { BillList } from './BillList';
 import * as Styled from './Bill.styles';
 
 interface IBill {
@@ -18,9 +19,9 @@ export interface IBillProps {
 export const Bill: React.FC<IBillProps> & IBill = ({ amount, title, date }) => (
   <li>
     <Styled.Text>
-      <Styled.Title>{ title }</Styled.Title>
-      <Styled.Amount>{ toUsd(amount) }</Styled.Amount>
-      <Styled.Date>{ format(date, 'do') }</Styled.Date>
+      <Styled.Title>{title}</Styled.Title>
+      <Styled.Amount>{toUsd(amount)}</Styled.Amount>
+      <Styled.Date>{format(date, 'do')}</Styled.Date>
     </Styled.Text>
   </li>
 );
