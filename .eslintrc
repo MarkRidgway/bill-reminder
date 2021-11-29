@@ -1,14 +1,11 @@
 {
   "extends": ["devjmetivier"],
   "rules": {
-    "react/jsx-no-useless-fragment": "error",
-    // "react/jsx-curly-spacing": [1, { "when": "always", "children": true }],
+    "react/jsx-no-useless-fragment": "error"
   },
   "overrides": [
     {
-      "files": [
-        "**/*.stories.*"
-      ],
+      "files": ["**/*.stories.*"],
       "rules": {
         "import/no-anonymous-default-export": "off"
       }
